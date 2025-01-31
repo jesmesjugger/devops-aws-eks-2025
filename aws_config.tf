@@ -20,7 +20,7 @@ resource "aws_config_config_rule" "acm-certificate-expiration-check" {
     source_identifier = "ACM_CERTIFICATE_EXPIRATION_CHECK"
   }
 
-  //maximum_execution_frequency = var.config_max_execution_frequency
+  maximum_execution_frequency = var.config_max_execution_frequency
 
-  depends_on = [aws_config_configuration_recorder.main]
+  //depends_on = [aws_config_configuration_recorder.main]
 }
